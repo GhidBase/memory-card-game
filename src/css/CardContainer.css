@@ -1,7 +1,7 @@
 #card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-template-rows: repeat(auto-fill, 150px);
 
     height: 100%;
 

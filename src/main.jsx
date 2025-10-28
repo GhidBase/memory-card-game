@@ -12,6 +12,11 @@ createRoot(document.getElementById("root")).render(
             <Header></Header>
             <CardContainer>
                 <Card></Card>
+                <Card></Card>
+                <Card></Card>
+                <Card></Card>
+                <Card></Card>
+                <Card></Card>
             </CardContainer>
         </Game>
     </StrictMode>

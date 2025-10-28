@@ -1,8 +1,12 @@
-.card {
+img {
     background-color: #1e2336;
     margin: 30px auto;
-    max-height: calc(100% - 60px);
-    height: 100%;
+    /* max-height: calc(100% - 60px);
+    height: 100%; */
     aspect-ratio: 1/1;
     box-sizing: border-box;
+}
+
+img {
+    width: calc(100% - 30px);
 }
