@@ -11,12 +11,27 @@ let cards = [
     {
         name: "squirtle",
     },
+    {
+        name: "roggenrola",
+    },
+    {
+        name: "mankey",
+    },
+    {
+        name: "piplup",
+    },
 ];
 
-export function CardContainer() {
+export function CardContainer({ onCardPress }) {
     function displayCards() {
         return cards.map((card) => {
-            return <Card name={card.name}></Card>;
+            return (
+                <Card
+                    key={card.name}
+                    name={card.name}
+                    onCardPress={onCardPress}
+                ></Card>
+            );
         });
     }
     return <div id="card-container">{displayCards()}</div>;

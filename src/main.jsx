@@ -9,15 +9,6 @@ import { Card } from "./components/Card.jsx";
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <Game>
-            <Header></Header>
-            <CardContainer>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-            </CardContainer>
         </Game>
     </StrictMode>
 );

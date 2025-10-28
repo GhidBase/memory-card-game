@@ -1,20 +1,19 @@
 import "../css/Card.css";
 import { useState } from "react";
 
-export function Card({ name }) {
-    const [imageUrl, setImageUrl] = useState();
+export function Card({ name, onCardPress }) {
+    const [imageUrl, setImageUrl] = useState(null);
 
-    async function getImgUrl() {
+    async function getImgUrl(name) {
         const apiPath = "https://pokeapi.co/api/v2/pokemon/" + name;
 
         let pokemonResponse = await fetch(apiPath);
         let pokemonJson = await pokemonResponse.json();
         setImageUrl(pokemonJson.sprites.front_default);
-        console.log(name)
     }
 
     if (imageUrl == null) {
-        getImgUrl();
+        getImgUrl(name);
     }
-    return <img src={imageUrl} className="card"></img>;
+    return <img src={imageUrl} className="card" onClick={() => onCardPress(name)}></img>;
 }
