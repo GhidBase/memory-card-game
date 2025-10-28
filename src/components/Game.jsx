@@ -5,13 +5,23 @@ import { shuffleArray } from "../js/shuffle.js";
 
 export function Game() {
     const [selectedCards, setSelectedCards] = useState([]);
+    const [highScore, setHighScore] = useState(0);
     console.log(selectedCards);
+    if (selectedCards.length > highScore) {
+        setHighScore(selectedCards.length);
+    }
 
     function onCardPress(name) {
-        const newSelections = [...selectedCards, name];
-        setSelectedCards(newSelections);
-
         setCards(shuffleArray(cards));
+
+        let newSelections;
+        if (selectedCards.includes(name)) {
+            newSelections = [];
+        } else {
+            newSelections = [...selectedCards, name];
+        }
+
+        setSelectedCards(newSelections);
     }
 
     const [cards, setCards] = useState([
@@ -25,7 +35,7 @@ export function Game() {
 
     return (
         <Fragment>
-            <Header></Header>
+            <Header score={selectedCards.length} highScore={highScore}></Header>
             <CardContainer
                 cards={cards}
                 onCardPress={onCardPress}
