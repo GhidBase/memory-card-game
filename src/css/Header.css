@@ -1,0 +1,16 @@
+header {
+    height: 140px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px;
+    box-sizing: border-box;
+
+    background-color: #1e2336;
+    color: #e4e8f2;
+
+    font-family: 'Cinzel', serif;
+
+}
