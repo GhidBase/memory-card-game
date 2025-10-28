@@ -13,6 +13,8 @@ export function Card({ name }) {
         console.log(name)
     }
 
-    getImgUrl();
+    if (imageUrl == null) {
+        getImgUrl();
+    }
     return <img src={imageUrl} className="card"></img>;
 }
